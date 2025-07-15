@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔥 SALOMÃO – O DITADOR DA VERDADE</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+            background-image: url('mystic_background.png');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            color: #ffffff;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+        
+        /* Efeito de partículas flutuantes */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        .particle {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: #ffd700;
+            border-radius: 50%;
+            animation: float 6s infinite linear;
+            opacity: 0.7;
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        
+        /* Container principal */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        /* Header */
+        .header {
+            text-align: center;
+            padding: 60px 0;
+            background: radial-gradient(circle at center, rgba(255, 215, 0, 0.1) 0%, transparent 70%);
+        }
+        
+        .warning {
+            background: linear-gradient(45deg, #ff4444, #cc0000);
+            color: white;
+            padding: 15px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            font-weight: bold;
+            text-align: center;
+            animation: pulse 2s infinite;
+            box-shadow: 0 0 20px rgba(255, 68, 68, 0.5);
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+            100% { transform: scale(1); }
+        }
+        
+        .main-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 3.5rem;
+            font-weight: 900;
+            background: linear-gradient(45deg, #ffd700, #ffaa00, #ff6600);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+            margin-bottom: 20px;
+            animation: glow 3s ease-in-out infinite alternate;
+        }
+        
+        @keyframes glow {
+            from { text-shadow: 0 0 20px rgba(255, 215, 0, 0.5); }
+            to { text-shadow: 0 0 40px rgba(255, 215, 0, 0.8), 0 0 60px rgba(255, 215, 0, 0.6); }
+        }
+        
+        .subtitle {
+            font-size: 1.5rem;
+            color: #cccccc;
+            margin-bottom: 40px;
+            font-style: italic;
+        }
+        
+        /* Seções */
+        .section {
+            margin: 80px 0;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+        
+        .section-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 2.5rem;
+            color: #ffd700;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .story-text {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            text-align: justify;
+            margin-bottom: 30px;
+        }
+        
+        .verse {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(255, 255, 255, 0.05));
+            padding: 25px;
+            border-left: 5px solid #ffd700;
+            margin: 30px 0;
+            font-style: italic;
+            font-size: 1.1rem;
+            border-radius: 10px;
+        }
+        
+        /* CTA Buttons */
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(45deg, #ff6600, #ffd700, #ff6600);
+            background-size: 200% 200%;
+            color: #000;
+            padding: 20px 40px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            margin: 20px auto;
+            display: block;
+            text-align: center;
+            max-width: 400px;
+            animation: gradient-shift 3s ease infinite, bounce 2s infinite;
+            box-shadow: 0 10px 30px rgba(255, 102, 0, 0.4);
+            transition: transform 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(255, 102, 0, 0.6);
+        }
+        
+        @keyframes gradient-shift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+        
+        /* Lista de benefícios */
+        .benefits-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .benefits-list li {
+            background: rgba(255, 215, 0, 0.1);
+            margin: 15px 0;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #ffd700;
+            font-size: 1.1rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .benefits-list li:hover {
+            transform: translateX(10px);
+            background: rgba(255, 215, 0, 0.2);
+        }
+        
+        /* Depoimentos */
+        .testimonial {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 30px;
+            margin: 25px 0;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            position: relative;
+        }
+        
+        .testimonial::before {
+            content: '"';
+            font-size: 4rem;
+            color: #ffd700;
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            font-family: serif;
+        }
+        
+        .testimonial-text {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            padding-left: 40px;
+        }
+        
+        .testimonial-author {
+            color: #ffd700;
+            font-weight: bold;
+            text-align: right;
+        }
+        
+        /* Versículos flutuantes */
+        .floating-verse {
+            position: fixed;
+            color: rgba(255, 215, 0, 0.6);
+            font-size: 0.9rem;
+            font-style: italic;
+            pointer-events: none;
+            z-index: 3;
+            animation: fadeInOut 8s infinite;
+        }
+        
+        @keyframes fadeInOut {
+            0%, 100% { opacity: 0; transform: translateY(20px); }
+            50% { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Símbolos místicos */
+        .mystic-symbol {
+            position: absolute;
+            font-size: 2rem;
+            color: rgba(255, 215, 0, 0.3);
+            animation: rotate 10s linear infinite;
+        }
+        
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 2.5rem;
+            }
+            
+            .subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .section {
+                margin: 40px 0;
+                padding: 20px;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .story-text {
+                font-size: 1.1rem;
+            }
+        }
+        
+        /* Efeito de código binário */
+        .binary-rain {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+            opacity: 0.1;
+        }
+        
+        .binary-char {
+            position: absolute;
+            color: #00ff00;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            animation: fall 8s linear infinite;
+        }
+        
+        @keyframes fall {
+            0% {
+                transform: translateY(-100vh);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Partículas flutuantes -->
+    <div class="particles" id="particles"></div>
+    
+    <!-- Chuva de código binário -->
+    <div class="binary-rain" id="binaryRain"></div>
+    
+    <!-- Versículos flutuantes -->
+    <div class="floating-verse" style="top: 20%; left: 10%;">"O Senhor é meu pastor, nada me faltará." — Salmo 23</div>
+    <div class="floating-verse" style="top: 60%; right: 15%; animation-delay: 3s;">"Os últimos serão os primeiros." — Mateus 20:16</div>
+    <div class="floating-verse" style="bottom: 30%; left: 20%; animation-delay: 6s;">"Mil cairão ao teu lado, e dez mil à tua direita, mas tu não serás atingido." — Salmo 91:7</div>
+    
+    <!-- Símbolos místicos -->
+    <div class="mystic-symbol" style="top: 15%; right: 10%;">🧿</div>
+    <div class="mystic-symbol" style="bottom: 20%; left: 5%; animation-delay: 5s;">✝️</div>
+    <div class="mystic-symbol" style="top: 50%; left: 3%; animation-delay: 3s;">🔒</div>
+    
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="warning">
+                ⚠️ Esse conteúdo é proibido de circular em grupos públicos.<br>
+                ⚠️ Pode sair do ar a qualquer momento por causa da censura das plataformas.
+            </div>
+            
+            <h1 class="main-title">🔥 SALOMÃO – O DITADOR DA VERDADE</h1>
+            <p class="subtitle">"O segredo que fez minha mãe parar de limpar chão e começou a limpar lágrimas."</p>
+        </header>
+        
+        <!-- História -->
+        <section class="section">
+            <h2 class="section-title">📜 A VERDADE REVELADA</h2>
+            
+            <div style="text-align: center; margin-bottom: 40px;">
+                <img src="salomao_portrait.png" alt="Salomão - O Ditador da Verdade" style="width: 200px; height: 200px; border-radius: 50%; border: 3px solid #ffd700; box-shadow: 0 0 30px rgba(255, 215, 0, 0.5);">
+            </div>
+            
+            <div class="story-text">
+                Eu não me orgulho do que vou contar aqui. Mas a verdade precisa ser dita. Meu nome é Salomão, sou filho de uma faxineira que criou 4 filhos sozinha. Em 2024, com 16 anos, eu descobri um padrão escondido dentro de um joguinho que até minha mãe mexia. Não era só um jogo. Era um portal disfarçado.
+            </div>
+            
+            <div class="story-text">
+                Estudei durante 9 meses, entre Bíblia, algoritmos e silêncio. Eu não agi com ganância. Agi com fé. A partir daquele momento, minha vida tomou um rumo inesperado. Os nove meses seguintes foram uma jornada intensa de estudo e introspecção. Mergulhei de cabeça em livros, em algoritmos complexos, e, surpreendentemente, na Bíblia.
+            </div>
+            
+            <div class="story-text">
+                Em Dezembro de 2024, depositei R$ 500. Em 13 dias, saquei R$ 10.420,00. Comprei um rancho, dei uma casa pra minha mãe, coloquei meus irmãos na escola e nunca mais precisei pedir. A dignidade, a liberdade, a capacidade de prover para a minha família, tudo isso se tornou uma realidade tangível.
+            </div>
+            
+            <div class="verse">
+                "Clama a mim, e responder-te-ei, e anunciar-te-ei coisas grandes e firmes que não sabes."<br>
+                — Jeremias 33:3
+            </div>
+        </section>
+        
+        <!-- CTA 1 -->
+        <section class="section">
+            <h2 class="section-title">🎁 ACESSO EXCLUSIVO</h2>
+            <p style="text-align: center; font-size: 1.3rem; margin-bottom: 30px;">
+                Baixe agora o eBook proibido que está transformando vidas em todo o Brasil:
+            </p>
+            <a href="https://go.tribopay.com.br/v3dk3bagzo" class="cta-button">
+                👉 ACESSAR AGORA POR R$9,90 💸
+            </a>
+        </section>
+        
+        <!-- Conteúdo do eBook -->
+        <section class="section">
+            <h2 class="section-title">📖 O QUE VOCÊ VAI APRENDER:</h2>
+            <ul class="benefits-list">
+                <li>🧠 O Ciclo 7-19 que ativa o algoritmo do Pix</li>
+                <li>🔒 Como usar casas de aposta legalizadas sem deixar rastro</li>
+                <li>✝️ A lógica espiritual que transforma aposta em ritual</li>
+                <li>💸 Como fazer R$ 100 por dia com mente limpa e fé ativa</li>
+                <li>🧿 O ritual diário do verdadeiro iniciado</li>
+            </ul>
+        </section>
+        
+        <!-- Depoimentos -->
+        <section class="section">
+            <h2 class="section-title">💬 VIDAS TRANSFORMADAS</h2>
+            
+            <div class="testimonial">
+                <div class="testimonial-text">
+                    Eu não acreditava… Mas li numa madrugada, chorei, joguei como tava escrito e saquei R$ 315. Esse eBook devia ser pecado.
+                </div>
+                <div class="testimonial-author">— Julio M. (Barueri/SP)</div>
+            </div>
+            
+            <div class="testimonial">
+                <div class="testimonial-text">
+                    Tô desempregada desde 2022. Depois que li, comecei a ganhar R$ 90 por dia. Já paguei todas as contas.
+                </div>
+                <div class="testimonial-author">— Silvia G. (Fortaleza/CE)</div>
+            </div>
+            
+            <div class="testimonial">
+                <div class="testimonial-text">
+                    Salomão, tu mudou minha vida. O que tu ensinou devia estar na Bíblia. Nunca mais entrei em desespero.
+                </div>
+                <div class="testimonial-author">— Maria das Dores (Recife/PE)</div>
+            </div>
+        </section>
+        
+        <!-- CTA Final -->
+        <section class="section">
+            <h2 class="section-title">🚀 ÚLTIMA CHANCE</h2>
+            <p style="text-align: center; font-size: 1.2rem; margin-bottom: 30px;">
+                Este conhecimento pode desaparecer a qualquer momento. Não perca a oportunidade de transformar sua vida.
+            </p>
+            <a href="https://go.tribopay.com.br/v3dk3bagzo" class="cta-button">
+                📥 CLIQUE AQUI PARA LIBERAR O MÉTODO (R$9,90)
+            </a>
+        </section>
+    </div>
+    
+    <script>
+        // Criar partículas flutuantes
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 50;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 6 + 's';
+                particle.style.animationDuration = (Math.random() * 3 + 3) + 's';
+                particlesContainer.appendChild(particle);
+            }
+        }
+        
+        // Criar chuva de código binário
+        function createBinaryRain() {
+            const binaryContainer = document.getElementById('binaryRain');
+            const binaryChars = ['0', '1'];
+            const columnCount = Math.floor(window.innerWidth / 20);
+            
+            for (let i = 0; i < columnCount; i++) {
+                const char = document.createElement('div');
+                char.className = 'binary-char';
+                char.textContent = binaryChars[Math.floor(Math.random() * binaryChars.length)];
+                char.style.left = (i * 20) + 'px';
+                char.style.animationDelay = Math.random() * 8 + 's';
+                char.style.animationDuration = (Math.random() * 4 + 4) + 's';
+                binaryContainer.appendChild(char);
+            }
+        }
+        
+        // Inicializar efeitos
+        document.addEventListener('DOMContentLoaded', function() {
+            createParticles();
+            createBinaryRain();
+        });
+        
+        // Efeito de scroll suave para os CTAs
+        document.querySelectorAll('.cta-button').forEach(button => {
+            button.addEventListener('click', function(e) {
+                // Adicionar efeito visual ao clicar
+                this.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    this.style.transform = 'scale(1.05)';
+                }, 100);
+            });
+        });
+    </script>
+</body>
+</html>
+
